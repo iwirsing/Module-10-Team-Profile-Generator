@@ -22,7 +22,7 @@ This program dynamically creates the html profile summary of a team from a user'
 3. Next, type `npm install` to install all the dependencies.
 4. Afterwards, type `node index.js` to run the program. 
 5. The user then types the answers corresponding to the prompts in the terminal. 
-6. When the prompts and answering are done, `index.html` and `style.css` are generated in the dist folder. 
+6. When the prompts and answering are done, `index.html` and `style.css` are generated in the `dist` folder. 
 7. Finally, view the html in the browser to see the final HTML.
 
 
