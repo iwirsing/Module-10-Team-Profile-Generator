@@ -1,0 +1,39 @@
+body {
+        /* background image of bricks added, they represent a secure wall, which the passwords should be */
+        background-color: #DBA72E;
+        font-family: sans-serif;
+      }
+    
+    .card {
+        background-color: rgba(255, 255, 255, 0.80);
+        border-radius: 5px;
+        border-width: 1px;
+        box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px 0px;
+        color: hsl(206, 17%, 28%);
+        font-size: 18px;
+        margin: 0 auto;
+        max-width: 800px;
+        padding: 10px 10px;
+      }
+    
+      .card:hover {
+        transform: scale(110%);
+    
+      }
+      @media (max-width: 690px) {
+        .btn {
+          font-size: 1rem;
+          margin: 16px 0px 0px 0px;
+          padding: 10px 15px;
+        }
+      
+        #password {
+          font-size: 1rem;
+        }
+      }
+      
+      @media (max-width: 500px) {
+        .btn {
+          font-size: 0.8rem;
+        }
+      }

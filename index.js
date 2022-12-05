@@ -147,9 +147,7 @@ function toDoNextResponse(data){
     }
     else{
         //build the html
-
-        // console.log(teamArray);
-        const indexData= buildHTML(teamArray);
+    buildHTML(teamArray);
         
 
     };
@@ -177,6 +175,7 @@ function buildHTML(team){
       <meta charset="UTF-8">
       <meta http-equiv="X-UA-Compatible" content="ie=edge">
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+      <link rel="stylesheet" href="style.css">
       <title>Team Profile Generator</title>
     </head>
     <body>
@@ -196,10 +195,52 @@ function buildHTML(team){
     //build it together
     const finalHTML =topHTML+teamContent+bottomHTML;
 
-    //write the file
-    fs.writeFile('index.html', finalHTML, (err) =>
+    //write the html file
+    fs.writeFile('./dist/index.html', finalHTML, (err) =>
     err ? console.log(err) : console.log('Successfully created index.html!')
      );
+
+    //write the accompanying css file
+    fs.writeFile('./dist/style.css',`body {
+        /* background image of bricks added, they represent a secure wall, which the passwords should be */
+        background-color: #DBA72E;
+        font-family: sans-serif;
+      }
+    
+    .card {
+        background-color: rgba(255, 255, 255, 0.80);
+        border-radius: 5px;
+        border-width: 1px;
+        box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px 0px;
+        color: hsl(206, 17%, 28%);
+        font-size: 18px;
+        margin: 0 auto;
+        max-width: 800px;
+        padding: 10px 10px;
+      }
+    
+      .card:hover {
+        transform: scale(110%);
+    
+      }
+      @media (max-width: 690px) {
+        .btn {
+          font-size: 1rem;
+          margin: 16px 0px 0px 0px;
+          padding: 10px 15px;
+        }
+      
+        #password {
+          font-size: 1rem;
+        }
+      }
+      
+      @media (max-width: 500px) {
+        .btn {
+          font-size: 0.8rem;
+        }
+      }`,(err)=>err ? console.log(err) : console.log('Successfully created style.css')
+      );
 }
 
 
