@@ -1,10 +1,10 @@
-const Employee=require('./employee');
+// const Employee=require('./employee');
 
-class Intern extends Employee{
-    constructor(name,employeeID,email,school){
-        super(name, employeeID, email);
-        this.school=school;
-    }
+// class Intern extends Employee{
+//     constructor(name,employeeID,email,school){
+//         super(name, employeeID, email);
+//         this.school=school;
+//     }
 
     buildHTML(){
         
@@ -18,8 +18,9 @@ class Intern extends Employee{
             <li class="list-group-item">Email: <a href="mailto:${this.email}">${this.email}</a></li>
             <li class="list-group-item">School: ${this.school}</li>
         </ul>
-        </div></div>`
+        </div>
+        </div>`
     }
 }
 
-module.exports = Intern;
+// module.exports = Intern;

@@ -1,8 +1,8 @@
 const inquirer=require('inquirer');
 const fs= require ('fs');
-const Manager=require('./manager');
-const Engineer=require('./engineer');
-const Intern=require('./intern');
+const Manager=require('./lib/Manager');
+const Engineer=require('./lib/Engineer');
+const Intern=require('./lib/Intern');
 
 
 //call another file to create object on team profile
