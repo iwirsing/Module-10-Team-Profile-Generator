@@ -40,10 +40,15 @@ Ask permission from the author at ivymolina@gmail.com. View more of my projects 
 
 ## Video Demonstration
 Screencastify:
-[![README Generator](./utils/images/READMEGenerator.png)](https://drive.google.com/file/d/1e8RSz7mW5LhxNpl5Rf0J1DgEN5VcrY55/view)
+[![Team Profile Generator](./assets/images/TeamProfileGenerator.png)](https://drive.google.com/file/d/1LFCoFdCrSVQxvMnl7uJI6rm-nJj_sSPx/view)
 
 ## Screenshots
 
+Generated index.html:
+![Index.html](./assets/images/sampleHTML.png)
+
+Tests results:
+![Tests](./assets/images/test.png)
 
 
 ## Questions? 
