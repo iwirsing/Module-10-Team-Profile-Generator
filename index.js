@@ -1,5 +1,6 @@
 const inquirer=require('inquirer');
 const fs= require ('fs');
+
 const Manager=require('./lib/Manager');
 const Engineer=require('./lib/Engineer');
 const Intern=require('./lib/Intern');
@@ -13,24 +14,35 @@ const questions = [
         type: 'input',
         message: ' What is the team manager\'s name?',
         name:'teamManager',
+        validate: teamManager =>(teamManager =='')? 'Please do not leave empty.': true,
 
     },
     {
         type: 'input',
         message: ' What is the team manager\'s employee ID?',
         name:'teamManagerID',
+        validate: teamManagerID =>(teamManagerID =='')? 'Please do not leave empty.': true,
 
     },
     {
         type: 'input',
         message: ' What is the team manager\'s email address?',
         name:'teamManagerEmail',
+        validate: function(teamManagerEmail)
+        {
+            // Regex mail check (return true if valid mail)
+            if( /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()\.,;\s@\"]+\.{0,1})+([^<>()\.,;:\s@\"]{2,}|[\d\.]+))$/.test(teamManagerEmail))
+                return true;
+            else
+                return 'Please enter valid email format.';
+        },
 
     },
     {
         type: 'input',
         message: ' What is the team manager\'s office number?',
         name:'teamManagerOfficeNumber',
+        validate: teamManagerOfficeNumber =>(teamManagerOfficeNumber =='')? 'Please do not leave empty.': true,
 
     },
     {
@@ -47,24 +59,35 @@ const addEngineer = [
         type: 'input',
         message: ' What is the engineer\'s name?',
         name:'engineerName',
+        validate: engineerName =>(engineerName =='')? 'Please do not leave empty.': true,
 
     },
     {
         type: 'input',
         message: ' What is the engineer\'s employee ID?',
         name:'engineerID',
+        validate: engineerID =>(engineerID =='')? 'Please do not leave empty.': true,
 
     },
     {
         type: 'input',
         message: ' What is the engineer\'s email address?',
         name:'engineerEmail',
+        validate: function(engineerEmail)
+        {
+            // Regex mail check (return true if valid mail)
+            if( /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()\.,;\s@\"]+\.{0,1})+([^<>()\.,;:\s@\"]{2,}|[\d\.]+))$/.test(engineerEmail))
+            return true;
+            else
+            return 'Please enter valid email format.';
+        },
 
     },
     {
         type: 'input',
         message: ' What is the engineer\'s Github username?',
         name:'engineerGithub',
+        validate: engineerGithub =>(engineerGithub =='')? 'Please do not leave empty.': true,
 
     },
 ];
@@ -74,23 +97,34 @@ const addIntern = [
         type: 'input',
         message: ' What is the intern\'s name?',
         name:'internName',
+        validate: internName =>(internName =='')? 'Please do not leave empty.': true,
     },
     {
         type: 'input',
         message: ' What is the intern\'s employee ID?',
         name:'internID',
+        validate: internID =>(internID =='')? 'Please do not leave empty.': true,
 
     },
     {
         type: 'input',
         message: ' What is the intern\'s email address?',
         name:'internEmail',
+        validate: function(internEmail)
+        {
+            // Regex mail check (return true if valid mail)
+            if( /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()\.,;\s@\"]+\.{0,1})+([^<>()\.,;:\s@\"]{2,}|[\d\.]+))$/.test(internEmail))
+            return true;
+            else
+            return 'Please enter valid email format.';
+        },
 
     },
     {
         type: 'input',
         message: ' What is the intern\'s school?',
         name:'internSchool',
+        validate: internSchool =>(internSchool =='')? 'Please do not leave empty.': true,
 
     },
 ];
@@ -220,7 +254,7 @@ function buildHTML(team){
       }
     
       .card:hover {
-        transform: scale(110%);
+        transform: scale(115%);
     
       }
       @media (max-width: 690px) {
