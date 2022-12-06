@@ -5,7 +5,7 @@
 
 This program dynamically creates the html profile summary of a team from a user's input in the command line. This could consist of a manager, engineers and interns. The email input will be validated and there is also validation for the other prompts when the user does not enter any value as an input.
 
-The HTML output will be responsive to media dimension, hovers on the profiles, opens an email draft when the email address is clicked and opens the Github link in a new tab when a Github link is clicked. An accompanying CSS file will also be created to make sure there will always be a CSS file that goes with the index.html.
+The HTML output will be responsive to media dimension, hovers on the profiles, opens an email draft when the email address is clicked and opens the Github link in a new tab when a Github link is clicked. An accompanying CSS file will also be created to make sure there will be a CSS file that goes with the index.html.
 
 ##  Table of Contents 
 1. [Installation](#installation)

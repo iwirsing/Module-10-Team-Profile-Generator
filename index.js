@@ -175,13 +175,13 @@ function toDoNextResponse(data){
         //go back to teambuild menu
         teamBuild();
 
-            });
+        });
 
 
     }
     else{
         //build the html
-    buildHTML(teamArray);
+        buildHTML(teamArray);
         
 
     };
@@ -197,7 +197,7 @@ function teamBuild(){
         toDoNextResponse(data.toDoNext);
         //build engineer object
 
-        });
+    });
 
 }
 
