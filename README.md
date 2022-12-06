@@ -10,11 +10,12 @@ The HTML output will be responsive to media dimension, hovers on the profiles, o
 ##  Table of Contents 
 1. [Installation](#installation)
 2. [Testing](#test) 
-3. [Contributing](#contributing) 
-4. [Video Demonstration](#test) 
-5. [Questions](#questions)
-6. [License](#license)
-7. [Sources](#sources)
+3. [Contributing](#contributing)
+4. [Video Demonstration](#test)
+5. [Screenshots](#screenshots)
+6. [Questions](#questions)
+7. [License](#license)
+8. [Sources](#sources)
 
 
 ## Installation
@@ -40,6 +41,8 @@ Ask permission from the author at ivymolina@gmail.com. View more of my projects 
 ## Video Demonstration
 Screencastify:
 [![README Generator](./utils/images/READMEGenerator.png)](https://drive.google.com/file/d/1e8RSz7mW5LhxNpl5Rf0J1DgEN5VcrY55/view)
+
+## Screenshots
 
 
 
